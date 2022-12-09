@@ -1,0 +1,126 @@
+* {
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+:root {
+
+    /* --- font --- */
+    --font-primary: 17px;
+
+    /* --- color --- */
+    --color-btn: #59A3C8;
+    --color-primary: #106796;
+
+}
+
+.flex-r {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.flex-c {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container {
+    background-color: #489CC1;
+    width: 100%;
+    min-height: 100vh;
+    padding: 50px 10px;
+}
+
+.toDoList {
+    width: 550px;
+    background: rgb(255, 255, 255);
+    justify-content: flex-start;
+    padding: 10px 40px 40px;
+    gap: 10px;
+}
+
+.toDoList .logo {
+    text-transform: uppercase;
+    text-shadow: 1px 1px 2px var(--color-btn);
+}
+
+.toDoList .formAddTask {
+    width: 100%;
+    justify-content: space-between;
+}
+
+.toDoList .formAddTask input {
+    width: 89%;
+    height: 45px;
+    outline: none;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.1em;
+    color: var(--color-primary);
+    border: 1px solid var(--color-btn);
+}
+
+.toDoList .formAddTask input:focus {
+    border: 2px solid #434341;
+}
+
+.toDoList .formAddTask input:focus::placeholder {
+    opacity: 0
+}
+
+.toDoList .formAddTask .addTask {
+    width: 45px;
+    height: 45px;
+    background: var(--color-btn);
+    cursor: pointer;
+    border: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.4em;
+    color: white;
+}
+
+
+/* --------- All Task Container ---------- */
+.toDoList .allTasks {
+    width: 100%;
+}
+
+.toDoList .allTasks .taskContainer {
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+    background: #badef2;
+    justify-content: space-between;
+}
+
+.toDoList .allTasks .taskContainer .row0 {
+    gap: 15px;
+}
+
+.toDoList .allTasks .taskContainer .row1 {
+    width: 35px;
+    justify-content: space-between;
+    color: var(--color-btn)
+}
+
+.toDoList .allTasks .taskContainer .row1 .removeBtn, .editBtn {
+    cursor: pointer;
+}
+
+.toDoList .allTasks .taskContainer .row1 .removeBtn i, .editBtn i {
+    font-size: 15px;
+}
+
