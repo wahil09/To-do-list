@@ -31,7 +31,7 @@
     flex-direction: column;
 }
 
-.container {
+body {
     background-color: #489CC1;
     width: 100%;
     min-height: 100vh;
@@ -39,11 +39,17 @@
 }
 
 .toDoList {
-    width: 550px;
+    max-width: 550px;
+    width: 100%;
     background: rgb(255, 255, 255);
     justify-content: flex-start;
-    padding: 10px 40px 40px;
+    padding: 15px 40px 30px;
     gap: 10px;
+    transition: 1s; 
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s; 
 }
 
 .toDoList .logo {
@@ -54,10 +60,11 @@
 .toDoList .formAddTask {
     width: 100%;
     justify-content: space-between;
+    row-gap: 10px;
 }
 
 .toDoList .formAddTask input {
-    width: 89%;
+    flex: 0.99;
     height: 45px;
     outline: none;
     border-radius: 3px;
@@ -94,33 +101,81 @@
 
 
 /* --------- All Task Container ---------- */
-.toDoList .allTasks {
+.toDoList .containerAllTasks {
     width: 100%;
+    min-height: 88px;
+    background-color: var(--color-btn);
 }
 
-.toDoList .allTasks .taskContainer {
+.toDoList .containerAllTasks .task {
     border-top: 1px solid #ccc;
     border-bottom: 1px solid #ccc;
     padding: 10px;
     background: #badef2;
     justify-content: space-between;
+    position: relative;
 }
 
-.toDoList .allTasks .taskContainer .row0 {
-    gap: 15px;
+.toDoList .containerAllTasks .task .row0 {
+    gap: 10px;
+    width: 90%;
+    justify-content: flex-start;
 }
 
-.toDoList .allTasks .taskContainer .row1 {
+.toDoList .containerAllTasks .task .row0 .checkbox {
+    padding: 10px;
+    width: 15px;
+    height: 15px;
+}
+
+.toDoList .containerAllTasks .task .row0 .textTask {
+    width: 90%;
+    padding: 0 5px;
+    line-height: 1.4;
+    overflow-wrap: break-word;
+    text-align: justify;
+}
+
+.toDoList .containerAllTasks .task .row0  .editable {
+    background: #d3fcfa;
+    outline: none;
+}
+
+.toDoList .containerAllTasks .task .row1 {
     width: 35px;
     justify-content: space-between;
     color: var(--color-btn)
 }
 
-.toDoList .allTasks .taskContainer .row1 .removeBtn, .editBtn {
+.toDoList .containerAllTasks .task .row1 .removeBtn, .editBtn {
     cursor: pointer;
 }
 
-.toDoList .allTasks .taskContainer .row1 .removeBtn i, .editBtn i {
+.toDoList .containerAllTasks .task .row1 .removeBtn i, .editBtn i {
     font-size: 15px;
 }
 
+
+/* ----------- Remove All Tasks -------------- */
+.btnRemoveAllTask, .btnRemoveSelectedTask {
+    padding: 5px;
+    font-size: var(--font-primary);
+    background-color: var(--color-btn);
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    color: aliceblue;
+    margin-top: 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+.editable {
+    background: var(--color-btn);
+}

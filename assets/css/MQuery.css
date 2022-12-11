@@ -1,0 +1,57 @@
+
+@media screen and (max-width: 478px) {
+    .toDoList .containerAllTasks .task {
+        flex-direction: column;
+        row-gap: 10px;
+    }
+
+    .checkbox {
+        position: absolute;
+        bottom: calc(50% - 15px/2);
+        right: 10px;
+        
+    }
+
+    .toDoList .containerAllTasks .task .row0 .textTask {
+        width: 100%;
+    }
+
+    .toDoList .containerAllTasks .task .row0 .textTask {
+        text-align: center;
+    }
+
+}
+
+@media screen and (max-width: 400px) {
+    .toDoList {
+        width: 100%;
+        padding: 10px 10px 30px;
+    }
+
+    .toDoList .logo {
+        font-size: 1.6em
+    }
+
+    .toDoList .formAddTask input {
+        width: 100%;
+        font-size: 1.1em
+    }
+
+    .toDoList .formAddTask .addTask {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 338px) {
+    .toDoList .logo {
+        font-size: 1.4em
+    }
+
+    .toDoList .formAddTask {
+        flex-direction: column;
+    }
+
+    .toDoList .formAddTask input {
+        font-size: 1em
+    }
+}

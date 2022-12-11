@@ -7,24 +7,25 @@
         <meta name="description" content="to do list app in html, css and javascript">
         <link rel="stylesheet" href="assets/css/all.css">
         <link rel="stylesheet" href="assets/css/main.css">
+        <link rel="stylesheet" href="assets/css/MQuery.css">
         <title>To-Do List</title>
     </head>
-    <body>
-        <div class="container flex-r">
-            <div class="toDoList flex-c">
-                <h1 id="logo" class="logo">todolist</h1>
-                <form method="" action="" id="formAddTask" class="formAddTask flex-r" onsubmit="return false">
-                    <input type="text" name="contentNewTask" id="contentNewTask" placeholder="New Task ?">
-                    <button class="addTask" id="addTask" class="addTask">+</button>
-                </form>
-                <div class="allTasks">
-                    <form action="#" method="get" id="taskForm" class="taskForm">
-                    </form>
-                </div>
+    <body class="flex-r">
+        <div class="toDoList flex-c">
+            <h1 id="logo" class="logo">todolist</h1>
+            <form method="" action="" id="formAddTask" class="formAddTask flex-r" onsubmit="return false">
+                <input type="text" name="contentNewTask" id="contentNewTask" placeholder="New Task ?">
+                <button id="addTask" class="addTask">+</button>
+            </form>
+
+            <div class="containerAllTasks" id="containerAllTasks">
+            </div>
+
+            <div class="containerButton">
+                <button onclick="removeSelectedTask()" id="btnRemoveSelectedTask" class="btnRemoveSelectedTask hidden">RemoveSelected</button>
+                <button onclick="removeAllTask()" id="btnRemoveAllTask"  class="btnRemoveAllTask hidden">Remove All Task</button>
             </div>
         </div>
         <script src="assets/js/main.js"></script>
     </body>
 </html>
-<!-- 
-<input type="text" id="changeTextTask" name="changeTextTask" class="changeTextTask"></input> -->
